@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viral Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div align="center" class="content">
+<h1><strong>Viral generator</strong></h1>
+<p th:text="'a=' + ${a} + ' , b='+ ${b}"></p>
+<h1 th:text="${res} "><strong></strong></h1>
+</div>
+</body>
+<style>
+    .content{
+        padding: 70px 0;
+        border: 3px solid deepskyblue;
+    }
+</style>
+</html>
