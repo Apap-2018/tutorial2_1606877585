@@ -61,6 +61,8 @@ public class PageController {
      * b representing how many text will be presented in the html
      * If one or both parameter is absent , the default value will be 0 and only one
      * letter each null value of the parameter will be presented
+     * If the input is a string that can't converted to Integer then 0 default value
+     * will be used.
      * Returning generator.html
      * @return
      */
@@ -70,8 +72,14 @@ public class PageController {
             a="0";
         if (b==null)
             b="0";
-        int aNum = Integer.parseInt(a);
-        int bNum = Integer.parseInt(b);
+        int aNum = 0,bNum = 0;
+        try {
+            aNum = Integer.parseInt(a);
+            bNum = Integer.parseInt(b);
+        }catch (NumberFormatException e){
+            a= "0" ;
+            b = "0";
+        }
         String res ;
         String m = "m";
         if (aNum>0){
